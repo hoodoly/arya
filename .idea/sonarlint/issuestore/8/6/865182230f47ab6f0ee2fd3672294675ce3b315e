@@ -1,4 +1,0 @@
-
-·%squid:RedundantThrowsDeclarationCheck"|Remove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from constructor's body.(âá¤©øÿÿÿÿ8öÒÂúó+
-Gsquid:S1481"+Remove this unused "client" local variable.(ÆâÕÙ8öÒÂúó+
-Vsquid:S1854":Remove this useless assignment to local variable "client".(ÆâÕÙ8öÒÂúó+

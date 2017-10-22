@@ -1,10 +1,0 @@
-
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(½ú†ô8õÒÂúó+
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(İ“Âßûÿÿÿÿ8õÒÂúó+
-Ksquid:S1481"0Remove this unused "nettyServer" local variable.(ñÃˆ8õÒÂúó+
-Zsquid:S1854"?Remove this useless assignment to local variable "nettyServer".(ñÃˆ8õÒÂúó+
-bsquid:UselessImportCheck"9Remove this unused import 'io.netty.bootstrap.Bootstrap'.(¦ÄÏï8õÒÂúó+
-dsquid:UselessImportCheck";Remove this unused import 'javax.annotation.PostConstruct'.(›ÅÁ8õÒÂúó+
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8õÒÂúó+
