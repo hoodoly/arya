@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="arya-client" />
+        <module name="arya-protocol" />
+        <module name="arya-serilization" />
+        <module name="arya-service" />
+        <module name="arya-transport" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="arya" target="1.5" />
+      <module name="arya-client" target="1.6" />
+      <module name="arya-protocol" target="1.5" />
+      <module name="arya-serilization" target="1.6" />
+      <module name="arya-service" target="1.5" />
+      <module name="arya-transport" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

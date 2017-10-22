@@ -1,0 +1,4 @@
+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8õÒÂúó+
+Ysquid:UnusedPrivateMethod"/Remove this unused private "getMessage" method.(²ùµç8õÒÂúó+
+|squid:S1450"[Remove the "firstMessage" field and declare it as a local variable in the relevant methods.(µ¡¡Ûøÿÿÿÿ8õÒÂúó+
