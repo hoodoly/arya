@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arya-serilization</artifactId>
+    <artifactId>arya-serialization</artifactId>
     <build>
         <plugins>
             <plugin>

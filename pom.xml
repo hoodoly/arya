@@ -12,7 +12,7 @@
         <module>arya-client</module>
         <module>arya-service</module>
         <module>arya-protocol</module>
-        <module>arya-serilization</module>
+        <module>arya-serialization</module>
         <module>arya-transport</module>
         <module>arya-zookeeper</module>
         <module>arya-demo</module>
