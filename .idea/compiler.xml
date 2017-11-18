@@ -7,19 +7,23 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="arya-client" />
+        <module name="arya-demo" />
         <module name="arya-protocol" />
         <module name="arya-serilization" />
         <module name="arya-service" />
         <module name="arya-transport" />
+        <module name="arya-zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="arya" target="1.5" />
       <module name="arya-client" target="1.6" />
+      <module name="arya-demo" target="1.6" />
       <module name="arya-protocol" target="1.5" />
       <module name="arya-serilization" target="1.6" />
       <module name="arya-service" target="1.5" />
       <module name="arya-transport" target="1.6" />
+      <module name="arya-zookeeper" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

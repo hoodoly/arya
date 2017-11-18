@@ -1,5 +1,12 @@
 
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(‡Û²«8õÒÂúó+
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8õÒÂúó+
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8õÒÂúó+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¦—Ó˜ô+
+rsquid:UselessImportCheck"IRemove this unused import 'io.netty.channel.SimpleChannelInboundHandler'.(Áˆí´8’ÛÈõ+
+Psquid:S1481"/Remove this unused "serializer" local variable.(É’ñÖüÿÿÿÿ8µ÷Œ·ù+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8¦—Ó˜ô+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÙçÃ˜ô+
+[squid:UnusedPrivateMethod",Remove this unused private "handler" method.(êÖ‘ãüÿÿÿÿ8’ÛÈõ+
+Y
+squid:S106"9Replace this use of System.out or System.err by a logger.(á¤“¨şÿÿÿÿ8¡¸”ğú+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÑöÇ˜ô+
+Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ÑöÇ˜ô+
+_squid:S1854">Remove this useless assignment to local variable "serializer".(É’ñÖüÿÿÿÿ8µ÷Œ·ù+

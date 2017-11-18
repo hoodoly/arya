@@ -47,3 +47,14 @@ j
 :arya-transport/src/main/java/com/yoku/arya/RpcRequest.java,4/3/439abafcd69f55ceef9e9753ba0fb3de8f6ecfe1
 F
 arya-zookeeper/pom.xml,4/a/4a68a8566968da213b5d05040e6f8929bc1f492a
+8
+arya.iml,8/9/89a75b1420204eed45ec481d3c009e79b1d88a7f
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+A
+arya-demo/pom.xml,a/1/a1397e6fcb818db0b2cfb43d3ba842c076c9bef4
+r
+Barya-demo/src/main/java/com/yoku/arya/service/DemoServiceImpl.java,b/2/b2e3ce191c74801492b8a9930cab390a7e7f31f1
+n
+>arya-demo/src/main/java/com/yoku/arya/service/DemoSrevice.java,0/e/0ef1aa566d6d1ce3b3876a8c012a02a159d8a8b8

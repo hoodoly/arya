@@ -9,7 +9,14 @@ import com.yoku.arya.Serializer;
  */
 public class SerializerFactory {
 
-    Serializer getSerialize(Class<? extends Serializer> clazz) throws IllegalAccessException, InstantiationException {
-        return clazz.newInstance();
+    public Serializer getSerialize(Class<? extends Serializer> clazz) {
+        try {
+            return clazz.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

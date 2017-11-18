@@ -1,4 +1,6 @@
 
-Dsquid:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8õÒÂúó+
-Ysquid:UnusedPrivateMethod"/Remove this unused private "getMessage" method.(²ùµç8õÒÂúó+
-|squid:S1450"[Remove the "firstMessage" field and declare it as a local variable in the relevant methods.(µ¡¡Ûøÿÿÿÿ8õÒÂúó+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(®‡¤ª8¡„ôïú+
+jsquid:UselessImportCheck"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Ãµ…“8ÿÚÛ˜ô+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öıû’8–Õ® õ+
+Qsquid:S1068"0Remove this unused "firstMessage" private field.(µ¡¡Ûøÿÿÿÿ8–Õ® õ+

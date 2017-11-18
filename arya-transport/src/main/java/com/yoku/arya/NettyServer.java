@@ -30,7 +30,7 @@ public class NettyServer {
             bootstrap.option(ChannelOption.SO_BACKLOG, 1024);
             bootstrap.option(ChannelOption.TCP_NODELAY, true);
             bootstrap.childOption(ChannelOption.SO_KEEPALIVE, true);
-            bootstrap.localAddress(4444);
+            bootstrap.localAddress(port);
             bootstrap.childHandler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel socketChannel) throws Exception {

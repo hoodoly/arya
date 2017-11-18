@@ -14,6 +14,6 @@ public class AryaRpcProxyFactory implements RpcProxyFactory {
     @Override
     @SuppressWarnings("unchecked")
     public <T> T createProxyBean(Class<T> rpcServiceInterface) {
-        return (T) Proxy.newProxyInstance(rpcServiceInterface.getClassLoader(), new Class[]{rpcServiceInterface}, new AryaRpcInvocationHandler());
+        return (T) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), new Class<?>[]{rpcServiceInterface}, new AryaRpcInvocationHandler());
     }
 }

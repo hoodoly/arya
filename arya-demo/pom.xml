@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>arya-transport</artifactId>
+    <artifactId>arya-demo</artifactId>
     <build>
         <plugins>
             <plugin>
@@ -23,27 +23,5 @@
         </plugins>
     </build>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.yoku.arya</groupId>
-            <artifactId>arya-demo</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.yoku.arya</groupId>
-            <artifactId>arya-serilization</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.4.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.10</version>
-        </dependency>
-    </dependencies>
 
 </project>

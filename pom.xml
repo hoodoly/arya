@@ -15,6 +15,7 @@
         <module>arya-serilization</module>
         <module>arya-transport</module>
         <module>arya-zookeeper</module>
+        <module>arya-demo</module>
     </modules>
 
     <dependencies>
