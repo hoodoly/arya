@@ -8,22 +8,5 @@
 
 
 .idea/*
-arya-client/src/main/resources/
-arya-client/src/test/
-arya-client/target/
-arya-demo/src/main/resources/
-arya-demo/src/test/
-arya-demo/target/
-arya-protocol/src/
-arya-protocol/target/
-arya-serialization/src/main/resources/
-arya-serialization/src/test/
-arya-serialization/target/generated-sources/
-arya-service/src/
-arya-service/target/
-arya-transport/src/main/resources/
-arya-transport/src/test/
-arya-transport/target/generated-sources/
-arya-zookeeper/src/
-arya-serialization/target/
+
 
