@@ -1,6 +1,0 @@
-
-Rsquid:S1172"1Remove this unused method parameter "rpcRequest".(£¸Îùÿÿÿÿ8Šö½ õ+
-Osquid:S1313".Make this IP "127.0.0.1" address configurable.(ü†é”úÿÿÿÿ8”ÛÈõ+
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Şùçó8…Éñú+
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ö“‚…8€¸¯ğú+
