@@ -1,6 +1,0 @@
-
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(®‡¤ª8¡„ôïú+
-jsquid:UselessImportCheck"ARemove this unused import 'java.io.UnsupportedEncodingException'.(Ãµ…“8ÿÚÛ˜ô+
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Öýû’8–Õ® õ+
-Qsquid:S1068"0Remove this unused "firstMessage" private field.(µ¡¡Ûøÿÿÿÿ8–Õ® õ+
