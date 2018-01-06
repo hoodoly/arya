@@ -1,25 +1,24 @@
 package com.yoku.arya;
 
-import io.netty.bootstrap.Bootstrap;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
-
-import javax.annotation.PostConstruct;
+import org.springframework.context.ApplicationContext;
 
 /**
  * @author HODO
  */
 public class NettyServer {
 
+    private ApplicationContext applicationContext;
 
-    public NettyServer(int port) {
-        init(port);
+    public NettyServer(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
     }
 
-    private void init(int port) {
+    public void init(String beanName, Object serviceBean, int port) {
         EventLoopGroup boss = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
 
@@ -35,13 +34,15 @@ public class NettyServer {
                 @Override
                 public void initChannel(SocketChannel socketChannel) throws Exception {
                     ChannelPipeline channelPipeline = socketChannel.pipeline();
-                    channelPipeline.addLast(new NettyServerHandler());
+                    channelPipeline.addLast(new NettyServerHandler(applicationContext));
                 }
             });
             ChannelFuture f = bootstrap.bind().sync();
             if (f.isSuccess()) {
                 System.out.println("启动Netty服务成功，端口号：" + port);
             }
+
+            registerZookeeper(beanName, serviceBean, "127.0.0.1", port);
             //Wait until the server socket is closed.
             f.channel().closeFuture().sync();
         } catch (Exception e) {
@@ -52,8 +53,9 @@ public class NettyServer {
             worker.shutdownGracefully();
         }
     }
-    public static void main(String[] args) {
-        NettyServer nettyServer = new NettyServer(4444);
+
+    private void registerZookeeper(String name, Object object, String ipAddress, int port) {
 
     }
+
 }

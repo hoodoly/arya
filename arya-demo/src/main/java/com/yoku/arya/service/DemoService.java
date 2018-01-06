@@ -6,7 +6,7 @@ package com.yoku.arya.service;
  * @author HODO
  * @date 2017/10/22
  */
-public interface DemoSrevice {
+public interface DemoService {
 
     Integer count(int number);
 }

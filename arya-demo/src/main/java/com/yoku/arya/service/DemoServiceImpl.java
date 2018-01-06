@@ -1,10 +1,13 @@
 package com.yoku.arya.service;
 
-public class DemoServiceImpl implements DemoSrevice {
+/**
+ * @author HODO
+ */
+public class DemoServiceImpl implements DemoService {
 
     @Override
     public Integer count(int number) {
 
-        return number++;
+        return ++number;
     }
 }

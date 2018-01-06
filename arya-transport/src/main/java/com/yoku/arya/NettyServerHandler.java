@@ -2,22 +2,27 @@ package com.yoku.arya;
 
 import com.yoku.arya.factory.ProtostuffSerializer;
 import com.yoku.arya.factory.SerializerFactory;
-import com.yoku.arya.service.DemoServiceImpl;
-import com.yoku.arya.service.DemoSrevice;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.channel.SimpleChannelInboundHandler;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.context.ApplicationContext;
 
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
  * @author HODO
  */
+@Slf4j
 public class NettyServerHandler extends ChannelInboundHandlerAdapter {
+
+    private ApplicationContext applicationContext;
+
+    public NettyServerHandler(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
 
     @Override
@@ -38,16 +43,16 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
     }
 
     private Object handler(RpcRequest rpcRequest) {
-        DemoSrevice demoSrevice = new DemoServiceImpl();
         Method method = rpcRequest.getMethod();
         try {
-            Method targetMethod = demoSrevice.getClass().getDeclaredMethod(method.getName(), method.getParameterTypes());
-            return targetMethod.invoke(demoSrevice, rpcRequest.getParams());
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+            if (applicationContext == null) {
+                throw new IllegalStateException("application must be init before handler a rpc request");
+            }
+            Object object = applicationContext.getBean(rpcRequest.getAClass());
+            Method targetMethod = object.getClass().getDeclaredMethod(method.getName(), method.getParameterTypes());
+            return targetMethod.invoke(object, rpcRequest.getParams());
+        } catch (Exception e) {
+            log.error("handler rpc request failed", e);
             e.printStackTrace();
         }
         return null;
