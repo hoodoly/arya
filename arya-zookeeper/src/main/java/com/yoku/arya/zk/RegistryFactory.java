@@ -1,10 +1,6 @@
 package com.yoku.arya.zk;
 
 import com.yoku.arya.zk.manager.RegistryManager;
-import org.springframework.util.SocketUtils;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 
 /**
  * @author HODO
@@ -21,7 +17,7 @@ public class RegistryFactory implements Registry {
 
     @Override
     public void register(String serverName, String serverAddress) {
-        registryManager.registerService(serverName, getLocalAddressAndPort());
+        registryManager.registerService(serverName, serverAddress);
     }
 
     @Override
@@ -38,14 +34,5 @@ public class RegistryFactory implements Registry {
             e.printStackTrace();
         }
         return new RegistryFactory();
-    }
-
-    private String getLocalAddressAndPort() {
-        try {
-            return InetAddress.getLocalHost().getHostAddress() + ":" + SocketUtils.findAvailableTcpPort();
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

@@ -52,8 +52,4 @@ public class NettyServer {
         }
     }
 
-    private void registerZookeeper(String name, Object object, String ipAddress, int port) {
-
-    }
-
 }

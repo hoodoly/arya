@@ -25,24 +25,28 @@ public class ZookeeperRegistryManager implements RegistryManager {
         initZkClient();
     }
 
+    public ZookeeperRegistryManager() {
+        initZkClient();
+    }
+
     private void initZkClient() {
         this.zkClient = new ZkClient(zkAddress);
     }
 
     @Override
     public boolean registerService(String serverName, String serverAddress) {
-        String path = createPath(serverName, serverAddress);
+        String path = createRegisterPath(serverName, serverAddress);
         return create(path);
     }
 
     @Override
     public boolean unregisterService(String serverName, String serverAddress) {
-        return delete(createPath(serverName, serverAddress));
+        return delete(createRegisterPath(serverName, serverAddress));
     }
 
     @Override
     public String consumerService(String consumerName) {
-        List<String> children = getChildren(createPath(consumerName, ""));
+        List<String> children = getChildren(createComsumerPath(consumerName));
         if (CollectionUtils.isEmpty(children)) {
             log.error("no server find server name : {}", consumerName);
         } else {
@@ -53,8 +57,12 @@ public class ZookeeperRegistryManager implements RegistryManager {
     }
 
 
-    private String createPath(String serverName, String serverAddress) {
+    private String createRegisterPath(String serverName, String serverAddress) {
         return SLASH + ROOT_PATH + SLASH + serverName + SLASH + serverAddress;
+    }
+
+    private String createComsumerPath(String serverName) {
+        return SLASH + ROOT_PATH + SLASH + serverName;
     }
 
     private boolean create(String path) {

@@ -15,6 +15,7 @@ public interface Registry {
      */
     void register(String serverName, String serverAddress);
 
+
     /**
      * 服务发现
      * 通过服务全限定名获取对应服务的地址和端口号
