@@ -26,15 +26,4 @@ public class ProtostuffSerializer implements Serializer {
         ProtostuffIOUtil.mergeFrom(bytes, object, schema);
         return object;
     }
-
-    public static void main(String[] args) {
-
-        long t = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            ProtostuffSerializer serializer = new ProtostuffSerializer();
-            byte[] bytes = serializer.serialize("1213131313" + i);
-            serializer.deserialize(bytes, String.class);
-        }
-        System.out.print(System.currentTimeMillis() - t);
-    }
 }

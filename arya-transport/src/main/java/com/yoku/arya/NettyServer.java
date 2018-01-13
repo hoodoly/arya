@@ -18,7 +18,7 @@ public class NettyServer {
         this.applicationContext = applicationContext;
     }
 
-    public void init(String beanName, Object serviceBean, int port) {
+    public void init(int port) {
         EventLoopGroup boss = new NioEventLoopGroup();
         EventLoopGroup worker = new NioEventLoopGroup();
 
@@ -41,8 +41,6 @@ public class NettyServer {
             if (f.isSuccess()) {
                 System.out.println("启动Netty服务成功，端口号：" + port);
             }
-
-            registerZookeeper(beanName, serviceBean, "127.0.0.1", port);
             //Wait until the server socket is closed.
             f.channel().closeFuture().sync();
         } catch (Exception e) {

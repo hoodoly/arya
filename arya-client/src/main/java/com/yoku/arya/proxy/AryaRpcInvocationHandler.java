@@ -1,11 +1,12 @@
 package com.yoku.arya.proxy;
 
 
-
 import com.yoku.arya.NettyClient;
 import com.yoku.arya.RpcRequest;
 import com.yoku.arya.RpcResponse;
-import org.springframework.aop.support.AopUtils;
+import com.yoku.arya.zk.Registry;
+import com.yoku.arya.zk.RegistryFactory;
+import com.yoku.arya.zk.manager.ZookeeperRegistryManager;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -21,8 +22,12 @@ public class AryaRpcInvocationHandler implements InvocationHandler {
             method.invoke(proxy, args);
         }
         RpcRequest rpcRequest = new RpcRequest("121", method.getDeclaringClass(), method, args);
-        NettyClient nettyClient = new NettyClient("localhost", 4444);
+        Registry registry = RegistryFactory.getRegistry(ZookeeperRegistryManager.class);
+        String serverAddr = registry.consumer(method.getDeclaringClass().getName());
+        NettyClient nettyClient = new NettyClient(serverAddr);
         RpcResponse rpcResponse = nettyClient.invoker(rpcRequest);
         return rpcResponse.getObject();
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.yoku.arya.annotation;
+package com.yoku.arya.annotation.resolver;
 
 import org.springframework.context.ApplicationEvent;
 

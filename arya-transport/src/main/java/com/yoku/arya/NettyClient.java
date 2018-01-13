@@ -33,6 +33,14 @@ public class NettyClient {
         this.host = host;
     }
 
+    public NettyClient(String inetAddress) {
+        if (inetAddress != null && inetAddress.length() != 0) {
+            String[] strings = inetAddress.split(":");
+            this.host = strings[0];
+            this.port = Integer.valueOf(strings[1]);
+        }
+    }
+
     public RpcResponse invoker(RpcRequest rpcRequest) throws InterruptedException {
 
         EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
@@ -78,14 +86,8 @@ public class NettyClient {
             countDownLatch.countDown();
         }
 
-        public RpcResponse getRpcResponse() {
+        RpcResponse getRpcResponse() {
             return rpcResponse;
         }
-    }
-    public static void main(String[] args) throws InterruptedException {
-        NettyClient nettyClient = new NettyClient("127.0.0.1", 4444);
-        RpcRequest rpcRequest = new RpcRequest("123", null, null, null);
-        RpcResponse rpcResponse = nettyClient.invoker(rpcRequest);
-        System.out.print(rpcResponse);
     }
 }

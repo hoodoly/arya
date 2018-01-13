@@ -20,7 +20,7 @@ public class NettyServerHandler extends ChannelInboundHandlerAdapter {
 
     private ApplicationContext applicationContext;
 
-    public NettyServerHandler(ApplicationContext applicationContext) {
+    NettyServerHandler(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
     }
 

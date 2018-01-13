@@ -1,12 +1,14 @@
-package com.yoku.arya.annotation;
+package com.yoku.arya.annotation.resolver;
 
 
 import com.yoku.arya.NettyServer;
+import com.yoku.arya.annotation.RpcProvider;
+import com.yoku.arya.zk.Registry;
+import com.yoku.arya.zk.RegistryFactory;
+import com.yoku.arya.zk.manager.ZookeeperRegistryManager;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.springframework.context.ApplicationEvent;
-import org.springframework.context.ApplicationListener;
 
 import javax.annotation.PostConstruct;
 import java.util.Map;
@@ -41,10 +43,12 @@ public class RpcProviderProcessor implements ApplicationContextAware {
             @Override
             public void run() {
                 NettyServer nettyServer = new NettyServer(applicationContext);
-                nettyServer.init(beanName, serviceBean, 4444);
+                nettyServer.init(4444);
             }
         });
-
         thread.start();
+
+        Registry registry = RegistryFactory.getRegistry(ZookeeperRegistryManager.class);
+        registry.register(beanName, null);
     }
 }

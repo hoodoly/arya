@@ -29,6 +29,11 @@
             <artifactId>arya-transport</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.yoku.arya</groupId>
+            <artifactId>arya-zookeeper</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 

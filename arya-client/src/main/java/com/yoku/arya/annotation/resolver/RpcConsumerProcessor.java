@@ -1,8 +1,7 @@
-package com.yoku.arya.annotation;
+package com.yoku.arya.annotation.resolver;
 
-import com.yoku.arya.NettyServer;
+import com.yoku.arya.annotation.RpcConsumer;
 import com.yoku.arya.proxy.AryaRpcProxyFactory;
-import org.springframework.aop.framework.AopProxyUtils;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

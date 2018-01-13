@@ -52,14 +52,4 @@ public class KryoSerializer implements Serializer {
         Input input = new Input(bais);
         return (T) kryo.readClassAndObject(input);
     }
-
-    public static void main(String[] args) {
-        long t = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
-            KryoSerializer kryo = new KryoSerializer();
-            byte[] bytes = kryo.serialize("qweqwe");
-            kryo.deserialize(bytes, String.class);
-        }
-        System.out.print(System.currentTimeMillis() - t);
-    }
 }
