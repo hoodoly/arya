@@ -39,12 +39,10 @@ public class NettyServer {
             });
             ChannelFuture f = bootstrap.bind().sync();
             if (f.isSuccess()) {
-                System.out.println("启动Netty服务成功，端口号：" + port);
+                System.out.println("Netty端口号：" + port);
             }
-            //Wait until the server socket is closed.
             f.channel().closeFuture().sync();
         } catch (Exception e) {
-            System.out.println("启动Netty服务异常，异常信息：" + e.getMessage());
             e.printStackTrace();
         } finally {
             boss.shutdownGracefully();
