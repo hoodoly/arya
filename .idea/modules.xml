@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/arya.iml" filepath="$PROJECT_DIR$/arya.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-client/arya-client.iml" filepath="$PROJECT_DIR$/arya-client/arya-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-protocol/arya-protocol.iml" filepath="$PROJECT_DIR$/arya-protocol/arya-protocol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-serilization/arya-serilization.iml" filepath="$PROJECT_DIR$/arya-serilization/arya-serilization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-service/arya-service.iml" filepath="$PROJECT_DIR$/arya-service/arya-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-transport/arya-transport.iml" filepath="$PROJECT_DIR$/arya-transport/arya-transport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arya-zookeeper/arya-zookeeper.iml" filepath="$PROJECT_DIR$/arya-zookeeper/arya-zookeeper.iml" />
+    </modules>
+  </component>
+</project>
