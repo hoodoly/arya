@@ -1,27 +1,25 @@
-# Created by .ignore support plugin (hsz.mobi)
-### Java template
-# Compiled class file
-*.class
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.ear
 *.zip
 *.tar.gz
 *.rar
+
+
 *.iml
-.idea
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-
+*.class
+.idea/
+target/
+arya-client/src/main/resources/
+arya-client/src/test/
+arya-demo/src/main/resources/
+arya-demo/src/test/
+arya-protocol/src/main/resources/
+arya-protocol/src/test/
+arya-serialization/src/main/resources/
+arya-serialization/src/test/
+arya-transport/src/main/resources/
+arya-transport/src/test/
+arya-zookeeper/src/main/resources/
+arya-zookeeper/src/test/
