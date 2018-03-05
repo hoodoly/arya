@@ -1,5 +1,6 @@
-package com.yoku.arya;
+package com.yoku.arya.netty;
 
+import com.yoku.arya.Serializer;
 import com.yoku.arya.factory.ProtostuffSerializer;
 import com.yoku.arya.factory.SerializerFactory;
 import io.netty.buffer.ByteBuf;

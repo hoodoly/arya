@@ -1,7 +1,7 @@
 package com.yoku.arya.annotation.resolver;
 
 
-import com.yoku.arya.NettyServer;
+import com.yoku.arya.netty.NettyServer;
 import com.yoku.arya.annotation.RpcProvider;
 import com.yoku.arya.zk.Registry;
 import com.yoku.arya.zk.RegistryFactory;

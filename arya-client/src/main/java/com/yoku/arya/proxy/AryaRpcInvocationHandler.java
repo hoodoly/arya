@@ -1,9 +1,9 @@
 package com.yoku.arya.proxy;
 
 
-import com.yoku.arya.NettyClient;
-import com.yoku.arya.RpcRequest;
-import com.yoku.arya.RpcResponse;
+import com.yoku.arya.netty.NettyClient;
+import com.yoku.arya.netty.RpcRequest;
+import com.yoku.arya.netty.RpcResponse;
 import com.yoku.arya.zk.Registry;
 import com.yoku.arya.zk.RegistryFactory;
 import com.yoku.arya.zk.manager.ZookeeperRegistryManager;

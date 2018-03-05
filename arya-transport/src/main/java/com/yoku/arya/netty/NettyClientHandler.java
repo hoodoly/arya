@@ -1,4 +1,4 @@
-package com.yoku.arya;
+package com.yoku.arya.netty;
 
 
 import io.netty.channel.ChannelHandlerContext;
