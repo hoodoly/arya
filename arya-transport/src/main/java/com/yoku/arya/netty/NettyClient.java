@@ -48,11 +48,14 @@ public class NettyClient {
         try {
             Bootstrap bootstrap = new Bootstrap();
             final NettyClientHandler clientHandler = new NettyClientHandler();
-            bootstrap.group(eventLoopGroup).channel(NioSocketChannel.class).option(ChannelOption.SO_KEEPALIVE, true).handler(new ChannelInitializer<SocketChannel>() {
-                @Override
-                protected void initChannel(SocketChannel socketChannel) throws Exception {
-                    socketChannel.pipeline().addLast(clientHandler);
-                }});
+            bootstrap.group(eventLoopGroup).channel(NioSocketChannel.class)
+                    .option(ChannelOption.SO_KEEPALIVE, true)
+                    .handler(new ChannelInitializer<SocketChannel>() {
+                        @Override
+                        protected void initChannel(SocketChannel socketChannel) throws Exception {
+                            socketChannel.pipeline().addLast(clientHandler);
+                        }
+                    });
             ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port)).sync();
 
             serializer.serialize(rpcRequest);

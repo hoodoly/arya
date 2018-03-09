@@ -1,7 +1,5 @@
 package com.yoku.arya;
 
-import java.io.Serializable;
-
 /**
  * @author HODO
  */
